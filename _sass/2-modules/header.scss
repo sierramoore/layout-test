@@ -1,0 +1,34 @@
+.header-primary {
+  font-family: "Avenir Next", Chivo, sans-serif;
+  color: $dark-blue;
+  font-size: 6rem;
+
+  @include respond(l-screen) {
+    position: absolute;
+    margin-left: 2rem;
+    top: 28%; left: 0;
+    z-index: 1;
+    width: 100%;
+  }
+}
+.header-secondary {
+  font-family: "Avenir Next", Chivo, sans-serif;
+  color: $dark-blue;
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 5% auto 0;
+}
+.header-tertiary {
+  font-size: 1.8rem;
+  color: $cold-blue;
+  margin-bottom: .6rem;
+}
+.header-forth {
+  font-size: 1.6rem;
+  color: $dark-blue;
+}
+.phone-text {
+  font-family: "Avenir Next", Chivo, sans-serif;
+  color: $dark-blue;
+  font-size: 1.4rem;
+}

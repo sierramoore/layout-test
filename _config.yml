@@ -1,0 +1,16 @@
+title: Layout
+description: "layout test"
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude: [".idea/"]

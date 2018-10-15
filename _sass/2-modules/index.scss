@@ -1,0 +1,113 @@
+.index {
+  height: 100%;
+  display: flex;
+  font-family: "Avenir Next", Chivo, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+
+  @include respond(xl-phone){
+    flex-direction: column;
+  }
+
+  .header-section {
+    width: 33.33333%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+
+    @include respond(xl-phone){
+      width: 66.666%;
+      min-height: 33.333%;
+      align-self: center;
+      margin: 5rem auto;
+    }
+  }
+  .right-header {
+    width: 66.66666%;
+    background-color: $mid-blue;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include respond(xl-phone){
+      width: 100%;
+    }
+  }
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &--1{
+    width: 50%;
+    align-self: center;
+    margin-bottom: 2.4rem;
+  }
+}
+.icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: $light2-blue;
+  border: 1px solid $mid-blue;
+  border-radius: 5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+.phone {
+  width: 22rem;
+  height: 40rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  margin: 1rem;
+  box-shadow: 0 2rem 5rem rgba(#000, .1);
+
+  &:first-child {
+    align-self: center;
+  }
+
+  @include respond(xl-phone){
+    width: 17rem;
+    height: 35rem;
+  }
+}
+
+
+.numbers {
+  font-family: "Avenir Next", Chivo, sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+  height: 35rem;
+
+  &__number {
+    align-self: center;
+    color: $dark-blue;
+    font-size: 6.5rem;
+  }
+  &__text {
+    color: $cold-blue;
+    font-size: 2.1rem;
+    font-weight: 500;
+  }
+}
+
+.offer {
+  font-family: "Avenir Next", Chivo, sans-serif;
+  height: 100%;
+  padding: 3rem;
+  background-color: $mid-blue;
+  margin: 2rem auto;
+  text-align: center;
+}
+.paragraphs {
+  font-family: "Avenir Next", Chivo, sans-serif;
+  height: 100%;
+  padding: 3rem;
+
+  display: flex;
+  justify-content: space-around;
+}
