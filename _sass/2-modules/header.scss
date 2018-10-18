@@ -1,7 +1,11 @@
 .header-primary {
-  font-family: "Avenir Next", Chivo, sans-serif;
+  font-family: $font;
+  font-weight: 700;
   color: $dark-blue;
-  font-size: 6rem;
+  font-size: 8rem;
+  line-height: 7.5rem;
+  letter-spacing: .45rem;
+  margin-bottom: 4rem;
 
   @include respond(l-screen) {
     position: absolute;
@@ -11,24 +15,32 @@
     width: 100%;
   }
 }
-.header-secondary {
-  font-family: "Avenir Next", Chivo, sans-serif;
-  color: $dark-blue;
+.header--tertiary {
+  font-family: $font;
+  color: $black;
+  letter-spacing: 1px;
   font-size: 3.5rem;
   text-align: center;
-  margin: 5% auto 0;
+  margin: 5% auto;
 }
-.header-tertiary {
+.header--secondary {
   font-size: 1.8rem;
-  color: $cold-blue;
-  margin-bottom: .6rem;
+  color: $grey;
+  margin-bottom: 6.5rem;
+  line-height: 3rem;
 }
-.header-forth {
+.header--forth {
+  font-size: 1.8rem;
+  color: $black;
+  margin-bottom: 1.5rem;
+}
+.header--paragraph {
   font-size: 1.6rem;
-  color: $dark-blue;
+  color: $grey;
+  line-height: 2.8rem;
 }
 .phone-text {
-  font-family: "Avenir Next", Chivo, sans-serif;
-  color: $dark-blue;
+  font-family: $font;
+  color: $grey;
   font-size: 1.4rem;
 }

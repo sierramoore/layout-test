@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-components</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ic-components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-4" transform="translate(3.000000, 2.000000)">
+            <path d="M36.4,18.2 L36.4,5.6 L23.8,5.6 C23.8,2.5074 21.2926,0 18.2,0 C15.1074,0 12.6,2.5074 12.6,5.6 L0,5.6 L0,16.8 C3.8654,16.8 7,19.9346 7,23.8 C7,27.6654 3.8654,30.8 0,30.8 L0,42 L11.2,42 C11.2,38.1346 14.3346,35 18.2,35 C22.0654,35 25.2,38.1346 25.2,42 L36.4,42 L36.4,29.4 C39.4926,29.4 42,26.8926 42,23.8 C42,20.7074 39.4926,18.2 36.4,18.2 Z" id="Shape" stroke="#444444" stroke-width="2" stroke-linecap="square"></path>
+            <rect id="Rectangle-7" fill="#2550EA" x="18.2608696" y="10.9565217" width="12.7826087" height="1.82608696" rx="0.913043478"></rect>
+            <rect id="Rectangle-8" fill="#2550EA" x="29.2173913" y="10.9565217" width="1.82608696" height="6.39130435" rx="0.913043478"></rect>
+            <rect id="Rectangle-9" fill="#2550EA" x="29" y="19" width="2" height="2" rx="1"></rect>
+        </g>
+    </g>
+</svg>

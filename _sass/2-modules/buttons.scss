@@ -1,18 +1,19 @@
 .btn {
-  font-family: "Avenir Next", Chivo, sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
-  border-radius: 2px;
+  font-family: $font;
+  font-weight: 400;
+  font-size: 1.4rem;
+  border-radius: 5px;
   border: none;
   text-align: center;
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem;
   text-decoration: none;
-  text-transform: uppercase;
   transition: background-color, transform .3s;
-  background-color: $cold-blue;
+  background-color: $bright-blue;
+  box-shadow: 0 2px 7px 0 rgba(52,65,88,0.20);
   color: #fff;
-  margin-bottom: 3rem;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 1rem 2.5rem 0;
 
   &:focus {
     outline: none;
@@ -20,7 +21,8 @@
 
   &--1 {
     background-color: #fff;
-    color: $cold-blue;
-    border: 1px solid $cold-blue;
+    color: black;
+    border: 1px solid rgba(121,121,121,0.22);
+    box-shadow: 0 2px 7px 0 rgba(52,65,88,0.07);
   }
 }

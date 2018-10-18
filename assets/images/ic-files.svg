@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-files</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ic-files" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Group-4" transform="translate(8.000000, 4.000000)" stroke-width="2">
+            <g id="file">
+                <path d="M18,0 L4,0 C1.790861,0 0,1.790861 0,4 L0,36 C0,38.209139 1.790861,40 4,40 L28,40 C30.209139,40 32,38.209139 32,36 L32,14 L18,0 Z" id="Shape" stroke="#000000"></path>
+                <polyline id="Shape" stroke="#2550EA" points="17 3.75 17 15 27.5 15"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
