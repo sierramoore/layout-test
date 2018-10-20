@@ -1,6 +1,6 @@
 title: Layout
 description: "layout test"
-baseurl: ""
+baseurl: "_site"
 url: ""
 
 # Build settings

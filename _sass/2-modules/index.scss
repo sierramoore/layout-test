@@ -1,19 +1,38 @@
-.wrapper {}
+.wrapper {
+  font-family: $font;
+  max-width: 1215px;
+  margin: auto;
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
 
 .index {
-  font-family: $font;
-  height: 100vh;
-  display: flex;
-  position: relative;
-  overflow-x: hidden;
+  //max-width: 1215px;
+
+  &::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
 
   @include respond(xl-phone){
     flex-direction: column;
   }
   .header {
-    display: flex;
-    flex-direction: column;
-    //width: 45%;
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 45%;
+    height: 100%;
     margin: 4rem 0 0 1.5rem;
 
     .logo {
@@ -43,15 +62,67 @@
   }
 
   .right-header {
-    width: 66.66666%;
     background-color: $mid-blue;
-    display: flex;
-    justify-content: space-evenly;
+    display: inline-block;
 
     @include respond(xl-phone){
-      width: 100%;
+      //width: 100%;
     }
   }
+}
+.col-6 {
+  width: 50%;
+  float: left;
+  display: inline-block;
+  position: relative;
+}
+.boxes {
+  position: absolute;
+  top: 0;
+  width: 60%;
+  z-index: 11;
+  float: left;
+}
+.phone-col {
+  width: 42%;
+  display: inline-block;
+  float: left;
+
+  &--1 {
+    margin-left: 1rem;
+    margin-top: calc(50vh - 30rem);
+  }
+  &--2 {
+    margin-top: calc(50vh - 70%);
+  }
+}
+.phone {
+  display: inline-block;
+  width: 263px;
+  height: 565px;
+  border-radius: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(#000, .1);
+  margin: 2.5rem;
+  position: relative;
+  transition: box-shadow 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+
+
+  &:first-child {
+    align-self: center;
+  }
+
+
+  @media screen and (max-width: 1200px) {
+    width: calc(263px / 1.2);
+    height: calc(565px / 1.2);
+    background-size: 269px;
+  }
+  //@include respond(xl-phone){
+  //  width: 17rem;
+  //  height: 35rem;
+  //}
 }
 
 .paragraphs {
@@ -127,24 +198,6 @@
   display: flex;
   justify-content: space-evenly;
 }
-.phone {
-  width: 23rem;
-  height: 45rem;
-  border-radius: 2rem;
-  background-color: #fff;
-  margin: 1rem;
-  box-shadow: 0 2rem 5rem rgba(#000, .1);
-
-  &:first-child {
-    align-self: center;
-  }
-
-  @include respond(xl-phone){
-    width: 17rem;
-    height: 35rem;
-  }
-}
-
 
 .numbers {
   font-family: $font;
