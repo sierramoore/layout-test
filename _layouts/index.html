@@ -16,18 +16,17 @@
 <script>
     AOS.init();
 
-    // nav bar //
-    var prevScrollpos = window.pageYOffset;
+    // nav bar pop up at certain point in scroll of page//
     const nav = document.getElementById("nav");
+
     window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            nav.style.top = "-250px";
+        if(window.pageYOffset >= 150 && window.pageYOffset !== 0){
+            nav.style.display = "flex";
         } else {
-            nav.style.top = "0";
+            nav.style.display = "none";
         }
-        prevScrollpos = currentScrollPos;
     };
+
     /////////
 
     // number change on scroll jQuery //

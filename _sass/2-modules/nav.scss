@@ -5,8 +5,9 @@
   box-shadow: 0 2px 4px 0 rgba(black, .08);
   z-index: 1;
   padding: .9rem 0;
-  display: flex;
   align-items: center;
+
+  display: none;
 
   &__logo {
     margin-right: auto;
