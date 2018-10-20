@@ -1,0 +1,25 @@
+.nav {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(black, .08);
+  z-index: 1;
+  padding: .9rem 0;
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    margin-right: auto;
+    margin-left: 1rem;
+    width: 4.7rem;
+  }
+  &__link {
+    color: $black;
+    font-size: 1.4rem;
+    margin-right: 3rem;
+
+    &__img {
+      margin-right: 1rem;
+    }
+  }
+}

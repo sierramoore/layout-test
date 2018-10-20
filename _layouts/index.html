@@ -16,6 +16,20 @@
 <script>
     AOS.init();
 
+    // nav bar //
+    var prevScrollpos = window.pageYOffset;
+    const nav = document.getElementById("nav");
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            nav.style.top = "-250px";
+        } else {
+            nav.style.top = "0";
+        }
+        prevScrollpos = currentScrollPos;
+    };
+    /////////
+
     // number change on scroll jQuery //
     (function($){
         $(window).on("load",function(){
