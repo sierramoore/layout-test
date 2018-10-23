@@ -1,24 +1,34 @@
-.wrapper {}
+.wrapper {
+  width: 100%;
+}
 
-.index {
+.main {
   font-family: $font;
   height: 100vh;
   display: flex;
-  position: relative;
+  //position: relative;
   overflow-x: hidden;
 
   @include respond(xl-phone){
     flex-direction: column;
   }
   .header {
+    float: left;
+    //display: inline-block;
+    //position: relative;
     display: flex;
     flex-direction: column;
-    //width: 45%;
-    margin: 4rem 0 0 1.5rem;
+    justify-content: center;
+    align-content: center;
+    width: 45%;
+    margin: 15% auto;
+    padding-left: 2rem;
+    //margin: 4rem 0 0 1.5rem;
 
     .logo {
-      width: 5rem;
-      margin: 0 0 5rem 1rem;
+      width: 4rem;
+      margin-bottom: 4.5rem;
+      //margin: 0 0 5rem 1rem;
     }
     .sub {
       color: $light-grey;
@@ -43,14 +53,46 @@
   }
 
   .right-header {
-    width: 66.66666%;
+    //float: right;
+    //width: 55%;
+    height: 100%;
     background-color: $mid-blue;
-    display: flex;
-    justify-content: space-evenly;
+    overflow: hidden;
+    position: relative;
 
-    @include respond(xl-phone){
-      width: 100%;
+    .phone-container {
+      display: flex;
+      @include absCenter;
+
+      .video {
+        display: inline-block;
+        width: 100%;
+        transform: scale(1.21);
+        top: 4rem;
+        position: relative;
+        overflow-y: hidden;
+      }
     }
+  }
+}
+
+.phone {
+  width: 26.3rem;
+  height: 56.5rem;
+  margin: 2.5rem;
+  border-radius: 2.9rem;
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem rgba(#000, .1);
+  position: relative;
+  overflow: hidden;
+
+  &:first-child {
+    align-self: center;
+  }
+
+  @include respond(xl-phone){
+    width: 17rem;
+    height: 35rem;
   }
 }
 
@@ -127,24 +169,6 @@
   display: flex;
   justify-content: space-evenly;
 }
-.phone {
-  width: 23rem;
-  height: 45rem;
-  border-radius: 2rem;
-  background-color: #fff;
-  margin: 1rem;
-  box-shadow: 0 2rem 5rem rgba(#000, .1);
-
-  &:first-child {
-    align-self: center;
-  }
-
-  @include respond(xl-phone){
-    width: 17rem;
-    height: 35rem;
-  }
-}
-
 
 .numbers {
   font-family: $font;
