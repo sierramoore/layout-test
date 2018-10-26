@@ -1,34 +1,53 @@
 .wrapper {
   width: 100%;
+  max-width: $max-page-width;
+  display: flex;
+  margin: 0 auto;
+  overflow-y: hidden;
+
+  @include respond(column2){
+    //position: relative;
+    //top: -8%;
+    //left: 0;
+    //width: 100%;
+  }
 }
 
 .main {
   font-family: $font;
   height: 100vh;
   display: flex;
-  //position: relative;
+  position: relative;
   overflow-x: hidden;
 
-  @include respond(xl-phone){
-    flex-direction: column;
-  }
   .header {
+    //@include clearFix;
+    overflow-x: hidden;
     float: left;
-    //display: inline-block;
-    //position: relative;
+    position: relative;
+    left: 8%; top: 8%;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     width: 45%;
-    margin: 15% auto;
-    padding-left: 2rem;
-    //margin: 4rem 0 0 1.5rem;
+    //margin: 14% auto;
+    //padding-left: 2rem;
+
+    @include respond(column2){
+      //position: relative;
+      //top: -6%;
+      //left: 25%;
+      //overflow: hidden;
+      //width: 100%;
+    }
 
     .logo {
-      width: 4rem;
+      width: 5rem;
       margin-bottom: 4.5rem;
-      //margin: 0 0 5rem 1rem;
+      margin-left: .5rem;
+      z-index: 10;
     }
     .sub {
       color: $light-grey;
@@ -53,16 +72,19 @@
   }
 
   .right-header {
-    //float: right;
-    //width: 55%;
     height: 100%;
+    min-height: 40rem;
     background-color: $mid-blue;
     overflow: hidden;
-    position: relative;
+
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 55%;
 
     .phone-container {
       display: flex;
-      @include absCenter;
+      @include phoneCenter;
 
       .video {
         display: inline-block;
@@ -73,9 +95,27 @@
         overflow-y: hidden;
       }
     }
+
+    @include respond(column2){
+      //top: 100%;
+      //left: 0;
+      //width: 100%;
+      //height: 35rem;
+    }
+  }
+
+  @include respond(column2){
+    flex-direction: column;
+    justify-content: center;
+    //float: none;
+    //width: 60%;
+    //height: 100%;
+    //margin: 4% auto;
   }
 }
-
+.phone-text {
+  margin-bottom: 1.5rem;
+}
 .phone {
   width: 26.3rem;
   height: 56.5rem;
@@ -90,6 +130,12 @@
     align-self: center;
   }
 
+  &__img {
+    width: 20rem;
+    height: 40rem;
+    border-radius: 2rem;
+  }
+
   @include respond(xl-phone){
     width: 17rem;
     height: 35rem;
@@ -102,6 +148,14 @@
   padding: 3rem;
   display: flex;
   justify-content: space-around;
+  max-width: $max-page-width;
+  margin: 0 auto;
+
+  @include respond(column2) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .link {
   color: $bright-blue;
@@ -123,6 +177,10 @@
     align-self: center;
     margin: 4rem auto;
     position: relative;
+
+    //@include respond(column2) {
+    //  width: 100%;
+    //}
 
     &::before {
       content: ' ';
@@ -174,7 +232,17 @@
   font-family: $font;
   display: flex;
   justify-content: space-evenly;
-  height: 35rem;
+  height: 100%;
+  margin-bottom: 10rem;
+
+  @include respond(column2) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & > * {
+      margin-bottom: 2rem;
+    }
+  }
 
   &__number {
     align-self: center;
@@ -192,18 +260,22 @@
 .offer {
   font-family: $font;
   height: 100%;
+  min-height: 120rem;
   padding: 3rem;
   background-color: $mid-blue;
   margin: 2rem auto;
   text-align: center;
+  overflow-y: hidden;
 }
 
 
 .reviews {
   height: 100%;
+  min-height: 80rem;
   width: 100%;
-  //max-width: 995px;
-  display: block;
+  max-width: $max-page-width;
+  margin: 0 auto;
+  //display: block;
   padding: 10rem 1.5rem;
   //margin: auto;
 
@@ -211,9 +283,17 @@
     display: flex;
     margin-right: auto;
     width: 100%;
+
+    @include respond(column2) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
   }
 
   .review {
+    height: 100%;
     width: 50%;
     margin: 5rem 0 5rem 3rem;
     font-family: $font;

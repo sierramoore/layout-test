@@ -24,7 +24,7 @@
     @media (max-width: 56em) { @content } //900px
   }
   @if $breakpoint == column2 {
-    @media (max-width: 960px) { @content } //960px
+    @media (max-width: 968px) { @content } //960px
   }
   @if $breakpoint == laptop {
     @media (max-width: 1024px) { @content } //1024px
@@ -40,9 +40,27 @@
   }
 }
 
+@mixin phoneCenter {
+  position: absolute;
+  top: 62%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+}
+
 @mixin absCenter {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin clearFix {
+  &::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
 }

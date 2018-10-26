@@ -1,9 +1,10 @@
 .nav {
   width: 100%;
   position: fixed;
+  top: 0;
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(black, .08);
-  z-index: 1;
+  z-index: 10;
   padding: .9rem 0;
   align-items: center;
 
