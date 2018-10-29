@@ -1,120 +1,90 @@
 .main {
   font-family: $font;
   height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   overflow-x: hidden;
-  //display: grid;
-  //grid-template-columns: 45% 55%;
 
-  //columns: 45vw 2;
-  //
-  @include respond(column2){
-    //columns: 80vw 1;
-    //height: 100%;
-    //flex: 1;
-    //display: block;
+  @include respond(column2) {
+    flex-direction: column;
   }
 
-  #wrapper {
-    width: 100%;
-    max-width: $max-page-width;
+  .header {
+    overflow-x: hidden;
+    position: relative;
+    left: 8%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    overflow-y: hidden;
+    justify-content: center;
+    z-index: 1;
+    width: 45%;
 
-    //columns: 45vw 2;
-    @include respond(column2){
-      flex: 1;
-      display: block;
-    }
-
-
-    .header {
-      overflow-x: hidden;
-      position: relative;
-      left: 8%;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
-      width: 45%;
-
-
-      @include respond(column2){
-        width: 100%;
-        height: 100%;
-        flex: 1;
-        left: 2rem;
-      }
-
-      .logo {
-        width: 5rem;
-        margin-bottom: 4.5rem;
-        margin-left: .5rem;
-        z-index: 10;
-      }
-      .sub {
-        color: $light-grey;
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-        position: relative;
-        display: inline-block;
-
-        &::before {
-          content: ' ';
-          display: inline-block;
-          width: 26px;
-          height: 26px;
-          background: url(../../assets/images/ae.svg) no-repeat center center;
-          background-size: contain;
-          float: left;
-          margin-right: 10px;
-          position: relative;
-          top: 4px;
-        }
-      }
-    }
-
-    .right-header {
+    @include respond(column2) {
+      width: 100%;
       height: 100%;
-      min-height: 40rem;
-      background-color: $mid-blue;
-      overflow: hidden;
+      min-height: 53rem;
+      margin: 2rem auto;
+      //left: 0;
+      align-content: center;
+    }
 
-      position: absolute;
-      top: 0;
-      left: 45%;
-      width: 55%;
+    .logo {
+      width: 5rem;
+      margin-bottom: 4.5rem;
+      margin-left: .5rem;
+      z-index: 10;
+    }
+    .sub {
+      color: $light-grey;
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      position: relative;
+      display: inline-block;
 
-      .phone-container {
-        display: flex;
-        @include phoneCenter;
-
-        .video {
-          display: inline-block;
-          width: 100%;
-          transform: scale(1.21);
-          top: 4rem;
-          position: relative;
-          overflow-y: hidden;
-        }
-      }
-
-      @include respond(column2){
-        //top: 100%;
-        //left: 0;
-        //height: 35rem;
-        //width: 100%;
-        //align-self: flex-end;
+      &::before {
+        content: ' ';
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        background: url(../../assets/images/ae.svg) no-repeat center center;
+        background-size: contain;
+        float: left;
+        margin-right: 10px;
+        position: relative;
+        top: 4px;
       }
     }
   }
 }
+
+.right-header {
+  height: 100%;
+  min-height: 40rem;
+  background-color: $mid-blue;
+  overflow: hidden;
+  position: relative;
+  width: 55%;
+
+  .phone-container {
+    display: flex;
+    @include phoneCenter;
+    .video {
+      display: inline-block;
+      width: 100%;
+      transform: scale(1.21);
+      top: 4rem;
+      position: relative;
+      overflow-y: hidden;
+    }
+  }
+  @include respond(column2) {
+    width: 100%;
+  }
+}
+
+
 .phone-text {
   margin-bottom: 1.5rem;
 }
@@ -183,10 +153,6 @@
     align-self: center;
     margin: 4rem auto;
     position: relative;
-
-    //@include respond(column2) {
-    //  width: 100%;
-    //}
 
     &::before {
       content: ' ';
@@ -281,9 +247,7 @@
   width: 100%;
   max-width: $max-page-width;
   margin: 0 auto;
-  //display: block;
   padding: 10rem 1.5rem;
-  //margin: auto;
 
   .row--1 {
     display: flex;
@@ -360,25 +324,6 @@
     & > * {
       margin-right: 2rem;
     }
-  }
-}
-
-
-
-.Main {
-  columns: 45vw 2;
-  height: 100vh;
-
-  .Header-left {
-
-  }
-  .Header-right {
-    background-color: $mid-blue;
-    height: 100vh;
-  }
-
-  @media screen and (max-width: 970px) {
-    columns: 80vw 1;
   }
 }
 
