@@ -21,8 +21,16 @@
     font-size: 1.4rem;
     margin-right: 3rem;
 
+    @include respond(column2){
+      display: none;
+    }
+
     &__img {
       margin-right: 1rem;
+
+      @include respond(column2){
+        display: none;
+      }
     }
   }
 }

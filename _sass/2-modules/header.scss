@@ -12,6 +12,12 @@
   position: relative;
   top: .5rem;
   //left: 2rem;
+  @media screen and (max-width: 1280px) {
+    font-size: 7rem;
+  }
+  @media screen and (max-width: 1060px) {
+    font-size: 6rem;
+  }
 }
 .header--tertiary {
   font-family: $font;
