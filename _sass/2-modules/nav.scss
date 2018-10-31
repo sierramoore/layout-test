@@ -8,7 +8,7 @@
   z-index: 10;
   padding: .9rem 0;
   align-items: center;
-
+  animation: opacity 300ms ease-in;
   display: none;
 
   &__logo {
@@ -33,4 +33,8 @@
       }
     }
   }
+}
+
+@keyframes opacity {
+  from {opacity: 0;} to {opacity: 1;}
 }

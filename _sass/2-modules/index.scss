@@ -1,20 +1,32 @@
+.back-color {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(90deg, #fff 45%, $mid-blue 55%);
+  @include respond(column2) {
+    background: #fff;
+  }
+}
+
 .main {
   font-family: $font;
   min-height: 100vh;
   width: 100%;
+  max-width: $max-page-width;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   overflow: hidden;
 
   @include respond(column2) {
     flex-direction: column;
+    margin: 4rem auto;
   }
 
   .header {
     overflow-x: hidden;
     position: relative;
-    left: 8%;
+    left: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,9 +37,7 @@
       width: 100%;
       height: 100%;
       min-height: 53rem;
-      left: 25%;
 
-      //align-items: center;
     }
 
     .logo {
@@ -60,12 +70,24 @@
 }
 
 .right-header {
-  height: 100%;
+  //height: 100%;
   min-height: 40rem;
   background-color: $mid-blue;
   overflow: hidden;
   position: relative;
   width: 55%;
+
+  //width: 100vw;
+  //left: 50%;
+  //right: 50%;
+  //margin-left: -50vw;
+  //margin-right: -50vw;
+
+  //position: absolute;
+  //top: 0;
+  //left: -15%;
+  //width: 55%;
+
 
   .phone-container {
     display: flex;
@@ -148,6 +170,13 @@
   flex-direction: column;
   position: relative;
   max-width: 40rem;
+  margin: 2rem 1rem;
+
+  &--2 {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+  }
 
   &--1{
     width: 80%;
@@ -198,6 +227,11 @@
 .row {
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 715px) {
+    align-self: center;
+    display: inline-block;
+  }
 }
 
 .numbers {
@@ -311,7 +345,7 @@
   font-size: 1.5rem;
   color: $light-grey-2;
   line-height: 1.7rem;
-  padding: 7.3rem 0;
+  padding: 4.5rem 0;
 
   display: flex;
   margin-left: 2rem;
@@ -319,10 +353,47 @@
   &__nav {
     list-style-type: none;
     display: flex;
+    justify-content: center;
     margin-left: auto;
 
     & > * {
       margin-right: 2rem;
+    }
+  }
+
+  .dark-link {
+    color: $dark-grey;
+    text-decoration: none;
+
+    padding: .2rem .3rem;
+    border-bottom: 2px solid transparent;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0; left: 0;
+      background-color: $dark-grey;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+    &:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+
+  @include respond(column2) {
+    display: block;
+    text-align: center;
+    &__nav {
+      margin: 2rem auto;
     }
   }
 }

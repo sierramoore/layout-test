@@ -23,9 +23,9 @@ html {
   //@include respond(tab-land) {  // width < 1200?
   //  font-size: 56.25%;
   //}
-  //@include respond(tab-port) { // width < 900?
-  //  font-size: 50%;
-  //}
+  @include respond(tab-port) { // width < 900?
+    font-size: 65%; // 50%
+  }
   @include respond(xl-phone) { // width < 900?
     font-size: 60%;
   }
