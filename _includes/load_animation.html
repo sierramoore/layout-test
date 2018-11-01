@@ -7,9 +7,9 @@
     // });
 
     // removes canvas from blocking btns after animation completes
-    // document.addEventListener('animationend', function() {
-    //     canvas.parentNode.removeChild(canvas)
-    // }, false);
+    document.addEventListener('animationend', function() {
+        canvas.parentNode.removeChild(canvas)
+    }, false);
 
     let canvas, ctx;
     let render, init;

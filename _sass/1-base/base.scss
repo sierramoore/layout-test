@@ -29,8 +29,11 @@ html {
   @include respond(xl-phone) { // width < 900?
     font-size: 60%;
   }
+  @include respond(m-phone) {
+    font-size: 55%;
+  }
 }
 
 body {
-
+  //max-width: 100%;
 }
