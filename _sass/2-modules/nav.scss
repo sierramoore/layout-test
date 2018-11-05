@@ -6,9 +6,9 @@
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(black, .08);
   z-index: 10;
-  padding: .9rem 0;
+  padding: 1.5rem 0;
   align-items: center;
-
+  animation: opacity 300ms ease-in;
   display: none;
 
   &__logo {
@@ -21,8 +21,20 @@
     font-size: 1.4rem;
     margin-right: 3rem;
 
+    @include respond(column2){
+      display: none;
+    }
+
     &__img {
       margin-right: 1rem;
+
+      @include respond(column2){
+        display: none;
+      }
     }
   }
+}
+
+@keyframes opacity {
+  from {opacity: 0;} to {opacity: 1;}
 }

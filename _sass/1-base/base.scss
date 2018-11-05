@@ -20,17 +20,21 @@ html {
   @include respond(laptop) {
     font-size: 70%;
   }
-  @include respond(tab-land) {  // width < 1200?
-    font-size: 56.25%;
-  }
+  //@include respond(tab-land) {  // width < 1200?
+  //  font-size: 56.25%;
+  //}
   @include respond(tab-port) { // width < 900?
-    font-size: 50%;
+    font-size: 65%; // 50%
   }
   @include respond(xl-phone) { // width < 900?
-    font-size: 40%;
+    font-size: 60%;
+  }
+  @include respond(m-phone) {
+    font-size: 55%;
   }
 }
 
 body {
-
+  //max-width: 100%;
+  overflow-x: hidden;
 }

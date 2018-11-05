@@ -1,0 +1,81 @@
+.overlay {
+  background-color: red;
+}
+#blob {
+  //background-color: red;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: 9998;
+  background: $mid-blue;
+  animation: blobExpand .7s forwards 1.4s ease-out;
+}
+.blob-text {
+  font-family: $font;
+
+  color: $dark-blue;
+  font-size: 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation: disappear .4s ease-out 1s forwards;
+}
+
+@keyframes blobExpand{
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(6);
+    opacity: 0;
+  }
+  //99%{
+  //  transform: translateX(-50%) scale(4);
+  //  //opacity: .6;
+  //}
+  100%{
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+}
+
+@keyframes disappear{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.4;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@keyframes loading {
+  0% {
+    visibility: hidden;
+    transform: translateY(-95%);
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes line {
+  0% {
+    transform: translateX(-33.333%);
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateX(0);
+    border-radius: 0;
+  }
+}
