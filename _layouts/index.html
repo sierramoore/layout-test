@@ -6,7 +6,9 @@
 </head>
 <body>
 
-{% include index.html %}
+    {% include load_animation.html %}
+    {% include index.html %}
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script
@@ -14,10 +16,6 @@
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
         crossorigin="anonymous"></script>
 <script>
-    // $(window).resize(function(){
-    //     var $width =  ( $(window).width() - $('.main').width() ) / 2;
-    //     $('.header, .right-header').css('width', $width);
-    // });
 
     AOS.init();
 
