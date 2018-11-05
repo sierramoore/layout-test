@@ -39,8 +39,7 @@
       min-height: 53rem;
       max-width: 100vw;
       left: 20%;
-      //align-items: center;
-      //margin: auto;
+      margin-bottom: 3rem;
     }
     @include respond(m-phone) {
       left: 2%;
@@ -81,6 +80,7 @@
   overflow: hidden;
   position: relative;
   width: 55%;
+  animation: line .4s forwards 1.4s ease-out;
 
   .phone-container {
     display: flex;

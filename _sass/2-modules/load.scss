@@ -1,5 +1,8 @@
 .overlay {
-
+  background-color: red;
+}
+#blob {
+  //background-color: red;
 }
 canvas {
   position: fixed;
@@ -8,10 +11,11 @@ canvas {
   width: 100vw;
   z-index: 9998;
   background: $mid-blue;
-  animation: blobExpand 1s forwards 1.4s ease-out;
+  animation: blobExpand .7s forwards 1.4s ease-out;
 }
 .blob-text {
   font-family: $font;
+
   color: $dark-blue;
   font-size: 2.5rem;
   position: absolute;
@@ -27,8 +31,16 @@ canvas {
     transform: scale(1);
     opacity: 1;
   }
+  50% {
+    transform: translateX(-50%) scale(6);
+    opacity: 0;
+  }
+  //99%{
+  //  transform: translateX(-50%) scale(4);
+  //  //opacity: .6;
+  //}
   100%{
-    transform: scale(40);
+    transform: translateX(-50%);
     opacity: 0;
   }
 }
@@ -57,3 +69,13 @@ canvas {
   }
 }
 
+@keyframes line {
+  0% {
+    transform: translateX(-33.333%);
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateX(0);
+    border-radius: 0;
+  }
+}
