@@ -1,7 +1,7 @@
 title: Layout
 description: "layout test"
-baseurl: ""
-url: ""
+baseurl: "/layout-test"
+url: "https://sierramoore.github.io"
 
 # Build settings
 markdown: kramdown
